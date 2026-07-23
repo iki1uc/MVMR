@@ -1,28 +1,33 @@
-# ANKER – Stabilisationsachse · iki1uc
+# MVMR · MOVE → WHIRL → OCTA → REAL · Eigenständige NC-Engine
 
-## Zweck
-ANKER ist die Stabilisationsachse des iki1uc‑Systems.
-Es hält die Achsen IQ, QI, EVO, UPD, UPG, BIOS und CALC im korrekten Verhältnis.
+MVMR ist eine eigenständige mathematische Engine, die alle Achsen
+(MOVE, WHIRL, OCTA, REAL) verbindet und eigene Ergebnisse erzeugt.
 
-## Struktur
-- NAME: ANKER
-- ID: A01
-- Station: S01
-- Dimension: D4
-- Modus: erabel (neutral, operation möglich)
+──────────────────────────────────────────────
+## 🔹 Achsen
 
-## Rolle
-ANKER stabilisiert, ohne selbst aktiv zu berechnen oder zu steuern.
-Es ist die neutrale Achse zwischen AXI, 6d und API.
+- MOVE → Ort, Home, Delta, Stabil
+- WHIRL → 81-Felder-Vektor
+- OCTA → 9×9 Matrix
+- REAL → 81 Routing-Felder
 
-## Bindungen
-- AXI
-- 6d
-- 360
-- 100
-- 213 (REAL)
-- API
+──────────────────────────────────────────────
+## 🔹 Effektbarkeiten
 
-## Status
-STATE = STABIL  
-READY = 100%
+### MOVE → WHIRL (Vektor)
+(ORT - HOME) × STABIL → Position im 81-Vektor
+
+### MOVE → OCTA (Matrix)
+ORT + HOME + DELTA → Position im 9×9 Feld
+
+### MOVE → REAL (Routing)
+STABIL + DELTA → Routing-Pfad 0–80
+
+──────────────────────────────────────────────
+## 🔹 Dateien
+
+- `MVMR.core.js` – Hauptengine
+- `MVMR.sort.js` – Sortierachse
+- `MVMR.result.json` – Ergebnis-Pool
+- `index.html` – Geometrie + Berechnung
+- `id.html` – ID-Stempel
